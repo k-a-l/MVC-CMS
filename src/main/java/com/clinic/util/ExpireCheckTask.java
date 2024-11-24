@@ -30,7 +30,7 @@ public class ExpireCheckTask extends TimerTask {
 
                 System.out.println("Found expired medicine: " + name);
 
-                String insertNotificationQuery = "INSERT INTO notifications (message) VALUES (?)";
+                String insertNotificationQuery = "INSERT INTO nnotifications (message) VALUES (?)";
                 PreparedStatement insertStatement = connection.prepareStatement(insertNotificationQuery);
                 insertStatement.setString(1, message);
                 insertStatement.executeUpdate();
